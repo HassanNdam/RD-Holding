@@ -10,7 +10,7 @@
  *
  * @package understrap
  */
-include('lov.php');
+include('data.php');
 get_header(); 
 
 global $wp_query;
@@ -95,65 +95,6 @@ $wp_query = $myquery;
 	</div> <!-- form wrapper end -->
 </div>
 
-
-<!-- <div class="container text-center mt-3 mb-3">
-	<div class="alert alert-warning alert-dismissible" role="alert">
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<strong>Candidatez </strong>aux postes d'animateur ou de directeur des centres de Loisirs de Compiègne en suivant ce lien.
-		<a  class="mt-5" href="https://demarches.agglo-compiegne.fr/jeunesse-sports" target="_blank" title="candidater">
-				<button type="button" class="btn btn-primary rounded-3 candidater" onclick="this.blur();" >Candidater</button>
-		</a>
-	</div>
-</div> -->
-
-<!-- Code bandeau temporaire été (3 exemplaires -->
-
-<!-- <div class="container text-center mt-3 mb-3">
-	<div class="alert alert-warning text-white alert-dismissible" role="alert">
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<strong>Candidatez </strong>aux postes d'animateur ou de directeur des centres de Loisirs de Compiègne en suivant ce lien.
-		<a  class="mt-5" href="https://demarches.agglo-compiegne.fr/jeunesse-sports" target="_blank" title="candidater">
-				<button type="button" class="btn btn-primary rounded-3 candidater" onclick="this.blur();" >Candidater</button>
-		</a>
-	</div>
-</div> -->
-
-<style>
-
-.alert-warning{
-	background-color:#001647;
-}
-
-.alert-dismissible .close{
-   color:white
-}
-
-.candidater{
- background-color:rgba(216,176,107,0.99);
- border:#ffff; 
-
-}
-
-.candidater:hover{
-	background-color:white; 
-	color:black;
-}
-
-
-
-/* .candidater{
-  background-color: #001647;
-  border:1px solid #000;
-  color:#ffffff
-
-}
-.candidater:hover{
-  background-color: rgba(216,176,107,0.99);
-  border:1px solid rgba(216,176,107,0.99);
-  color:#ffffff
-} */
-</style>
-
 	<div class="container jobs">
 		<br>
 		<h3>Les offres d'emploi (<strong><?php echo $myquery -> found_posts ?></strong>) </h3>
@@ -221,10 +162,12 @@ $wp_query = $myquery;
 
 	<div class="container">
 		<div class="row justify-content-center">
+
 			<!-- The pagination component -->
+
 			<?php intuition_pagination(); ?>
 		</div>
-	</div> <!-- jobs wrapper end -->
+	</div> 
 
 </article>
 
