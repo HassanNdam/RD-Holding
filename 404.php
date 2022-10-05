@@ -1,38 +1,24 @@
 <?php
-/***/
 
 get_header(); ?>
 
 
-<article class="after-nav">
-
-<div class="container header-wrapper">
-
-			<img class="header-img" src="<? echo(get_template_directory_uri()); ?>/images/bandeau-default.jpg" alt="">
+<?php if(is_404()) : ?>
+<div class="container d-flex align-items-center justify-content-center mb-5 shadow-sm p-5">
+    <div class="text-center">
+        <h1 class="display-1 fw-bold text-404 ">404</h1>
+        <p class="fs-3 mt-3"> <span class="text-dark">Désolé!</span> Page non trouvée.</p>
+        <p class="lead mb-4">
+            La page que vous recherchez n'existe pas.
+        </p>
+        <a href="<?php echo get_site_url();?>" target="_blank" title="Nous rejoindre">
+            <button type="button" class="btn" onclick="this.blur();"> Trouver un poste</button>
+        </a>
+    </div>
 </div>
 
+<?php 
+endif ;
+get_footer(); 
 
-<div class="container">
-
-	<main id="main" class="site-main mt-3 text-center" role="main">
-
-		<h1>Il n'y a pas de contenu à cette adresse. </h1>
-		<p>
-
-		Retrouvez toutes nos opportunités d'emploi sur la page des offres.
-	</p>
-
-		<p class="text-center">
-			<a href="<?php echo(get_site_url()); ?>/contact-logiciel/">
-			<button type="button" class="btn btn-blue">Trouver un poste</button></a>
-		</p>
-
-
-	</main><!-- #main -->
-
-</div>
-
-<?php
-get_sidebar();
-get_footer();
 ?>
