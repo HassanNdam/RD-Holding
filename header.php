@@ -7,8 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="description" content="Holding RD Finance, Groupe couvrant les enseignes Brasseries Éditos, Sherlock Pubs, Burger King, Starbuks sur la région de Reims, et nord de la France">
+    <meta name="og:description" content="Holding RD Finance, Groupe couvrant les enseignes Brasseries Éditos, Sherlock Pubs, Burger King, Starbuks sur la région de Reims, et nord de la France">
     <link rel="canonical" href="https://www.holding-rd-finance.fr">
+	<meta property="og:image:width" content="200">
+	<meta property="og:image:height" content="200">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="https://static.wixstatic.com/media/3378e8_324b4761255f47808db05740ddd12252~mv2.png/v1/fill/w_460,h_130,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/LOGO%20HOLDING%20SEUL.png" />
     <meta property="og:title" content="Holding RD Finance | Groupe de Marques Restauration | Reims">
 
     <link rel="stylesheet" href="<?php echo(get_template_directory_uri() . '/css/bootstrap.min.css') ?>">
