@@ -11,7 +11,7 @@ get_header(); ?>
         <p class="lead mb-4">
             La page que vous recherchez n'existe pas.
         </p>
-        <a href="<?php echo get_site_url();?>" target="_blank" title="Nous rejoindre">
+        <a href="<?php echo get_site_url();?>" title="Nous rejoindre">
             <button type="button" class="btn" onclick="this.blur();"> Trouver un poste</button>
         </a>
     </div>
