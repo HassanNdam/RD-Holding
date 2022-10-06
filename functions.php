@@ -16,36 +16,8 @@ if ( ! function_exists ( 'date_pub' ) ) {
 	}
 }
 
-if ( ! function_exists ( 'intuition_post_nav' ) ) {
-	function intuition_post_nav() {
-		// Don't print empty markup if there's nowhere to navigate.
-		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-		$next     = get_adjacent_post( false, '', false );
-
-		if ( ! $next && ! $previous ) {
-			return;
-		}
-		?>
-				<nav class="container navigation post-navigation">
-					<div class="row nav-links justify-content-between">
-						<?php
-
-							if ( get_previous_post_link() ) {
-								previous_post_link( '<span class="nav-previous">%link</span>', '<' );
-							}
-							if ( get_next_post_link() ) {
-								next_post_link( '<span class="nav-next">%link</span>',     '>');
-							}
-						?>
-					</div><!-- .nav-links -->
-				</nav><!-- .navigation -->
-
-		<?php
-	}
-}
-
-if ( ! function_exists ( 'intuition_pagination' ) ) {
-	function intuition_pagination( $args = array(), $class = 'pagination' ) {
+if ( ! function_exists ( 'rd_holding_pagination' ) ) {
+	function rd_holding_pagination( $args = array(), $class = 'pagination' ) {
         if ($GLOBALS['wp_query']->max_num_pages <= 1) return;
 		$args = wp_parse_args( $args, array(
 			'mid_size'           => 2,
