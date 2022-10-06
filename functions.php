@@ -2,8 +2,8 @@
 /**
  */
 
-if ( ! function_exists ( 'intuition_posted_on' ) ) {
-	function intuition_posted_on() {
+if ( ! function_exists ( 'date_pub' ) ) {
+	function date_pub() {
 		$time_string = '<i class="fa-solid fa-calendar-days"></i> Publiée le <time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( 'c' ) ),
