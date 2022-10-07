@@ -12,47 +12,56 @@
 ?>
 
 
-<section id="wrapper-footer" class="bg-blue">
-
-	<div class="container">
-		<div class="row footer-row">
-			<div class="col-lg-3 footer-links">
-				<h5><a href="https://www.ogf.fr/" target="_blank">
-					<img src="<?php echo(get_template_directory_uri()) . '/images/logo-footer.png' ?>" class="img-fluid" alt="">
-				</a></h5>
-			</div><!--col end -->
-
-			<div class="col-lg-3 footer-links">
-				<h5><a href="https://www.ogf.fr/metier-qui-a-du-sens" target="_blank">Contact</a></h5>
-			</div><!--col end -->
-			<div class="col-lg-3 footer-links">
-				<h5><a href="https://www.ogf.fr/mentions-legales" class="white-text" >Mentions légales</a></h5>
-			</div>
-			<div class="col-lg-3 footer-links">
-				<h5><a href="https://www.linkedin.com/company/ogf/" target="_blank">
-				<i class="fa-brands fa-linkedin-in"></i>
-					</a>
-				</h5>
-			</div>
-
-							<!--col end -->
-		</div><!-- row end -->
-
-		<hr class="footer-separator">
-
-		<div class="row footer-copyright">
-			<div class="col-lg-2"></div>
-			<div class="col-lg-8">
-				<p class="copyright">© Copyright 2022 - Groupe OGF - Powered by <a href="https://paradisiak.com/" target="_blank" class="copyright">Paradisiak</a> </p>
-			</div>
-			<div class="col-lg-2"></div>
-
-
-		</div>
-	</div><!-- container end -->
+<section id="wrapper-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 footer-links">
+                <h5>
+                    <a href="https://www.holding-rd-finance.fr/nos-valeurs" >Nos Valeurs</a>
+                    <hr class="footer-separator">
+                </h5>
+            </div>
+            <div class="col-lg-4 footer-links">
+                <h5>
+                    <a href="https://www.holding-rd-finance.fr/blog" >Nos Actualités</a>
+                    <hr class="footer-separator">
+                </h5>
+            </div>
+            <div class="col-lg-4 footer-links">
+                <h5><a href="https://www.facebook.com/HoldingRDFinance/" class="white-text">Suivez-Nous sur Facebook</a>
+                    <hr class="footer-separator">
+                </h5>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-lg-4 footer-links">
+                <h5><a href="https://www.holding-rd-finance.fr/copie-de-le-groupe" >Nos etablissements /
+                        Nos Adresses</a>
+                    <hr class="footer-separator">
+                </h5>
+            </div>
+            <div class="col-lg-4 footer-links">
+                <h5><a href="https://www.holding-rd-finance.fr/copie-de-nos-adresses" class="white-text">Nous
+                        contacter</a>
+                    <hr class="footer-separator">
+                </h5>
+            </div>
+            <div class="col-lg-4 footer-links">
+                <h5><a href="https://www.holding-rd-finance.fr/nos-enseignes" class="white-text">Nos enseignes</a>
+                    <hr class="footer-separator">
+                </h5>
+            </div>
+        </div>
+    </div>
 </section>
 
-
+<section class="footer-copyright">
+    <div class="row align-items-center justify-content-center">
+        <p class="copyright pt-3">© Copyright 2022 - HOLDING RD Finance - Powered by <a href="https://paradisiak.com/"
+                ="" class="text-white"
+                title="Paradisiak - Agence Web des RH"><strong>Paradisiak</strong></a> </p>
+    </div>
+</section>
 
 
 
@@ -60,4 +69,5 @@
 <script src="<?php echo(get_template_directory_uri() . '/js/jquery-3.5.1.min.js') ?>"></script>
 <script src="<?php echo(get_template_directory_uri() . '/js/bootstrap.min.js') ?>"></script>
 </body>
+
 </html>
