@@ -31,26 +31,26 @@ if ( ! function_exists ( 'rd_holding_pagination' ) ) {
         $links = paginate_links($args);
         ?>
 
-        <nav aria-label="<?php echo $args['screen_reader_text']; ?>">
+<nav aria-label="<?php echo $args['screen_reader_text']; ?>">
 
-            <ul class="pagination">
-
-                <?php
-                    foreach ( $links as $key => $link ) { ?>
-
-                        <li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : '' ?>">
-
-                            <?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
-
-                        </li>
-
-                <?php } ?>
-
-            </ul>
-
-        </nav>
+    <ul class="pagination">
 
         <?php
+                    foreach ( $links as $key => $link ) { ?>
+
+        <li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : '' ?>">
+
+            <?php echo str_replace( 'page-numbers', 'page-link', $link ); ?>
+
+        </li>
+
+        <?php } ?>
+
+    </ul>
+
+</nav>
+
+<?php
     }
 }
 
@@ -93,3 +93,25 @@ remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
+
+// Function refresh page if no post à > 0
+
+function refresh_page(){
+	if($_GET)
+		if($_GET['s']){
+		 if($GLOBALS['postnumber'] >= 0){
+			?>
+			<div class="container header-wrapper">
+				<div class="breadscrumbs">
+					<a href="<?php echo(get_site_url()); ?> " title="Revenir l'acceuil de RD Holding"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a> 
+					<a href="<?php echo(get_site_url()); ?>?s=<?php echo($searchstring . '&location=' . $joblocation); ?>" class=""
+						rel="bookmark">
+						< Revenir à la liste des offres </a>
+				</div>
+			</div>
+
+
+<?php 
+		 }
+	}
+}
