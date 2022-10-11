@@ -115,3 +115,18 @@ function refresh_page(){
 		 }
 	}
 }
+
+
+//Fonction change title text for search engine (SEO)
+
+function change_title_browser_top(){
+    if(is_front_page()){
+      return bloginfo("name");
+    }elseif(is_single()){
+        echo $post_single_title = ' - Offres d\'emploi RD Holding' . single_post_title() ;  
+        return $post_single_title ;     }
+        else{
+            echo $search_title = "Recherche - Offre d'emploi Holding RD Finance";
+            return $search_title; 
+        }
+}
