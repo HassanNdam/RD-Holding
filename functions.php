@@ -130,3 +130,21 @@ function change_title_browser_top(){
             return $search_title; 
         }
 }
+
+
+//Function to display the elements on the select (via search form)
+
+function select_search_value( $list = array(), $compare_value){
+    $i = 0; 
+    while($i < count($list)) : 
+        foreach($list as $element):                                        
+            echo("<option value='" . ($i + 1) . "'");
+            if($compare_value == $i + 1) {
+                echo(" selected='selected'");
+            }
+            echo(">" . $element. "</option>");
+            ++$i;
+        endforeach;
+    endwhile; 
+
+}
