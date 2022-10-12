@@ -104,7 +104,7 @@ $postnumber = $myquery -> found_posts;
 
                     <div class=" col-md-6 search-item">
                         <input type="text" id="location" name="location"
-                            placeholder="Localisation(Cp, Région, Département...)" class="form-control"
+                            placeholder="Localisation (Cp, Région, Département...)" class="form-control"
                             value="<?php echo($location); ?>">
                     </div>
                 </div>
