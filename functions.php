@@ -96,15 +96,15 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 // Function refresh page if no post à > 0
 
-function refresh_page(){
+function refresh_page(int $marque, string $location){
 	if($_GET)
-		if($_GET['s']){
+		if($_GET['location'] OR $_GET['marque']){
 		 if($GLOBALS['postnumber'] >= 0){
 			?>
 			<div class="container header-wrapper">
 				<div class="breadscrumbs">
 					<a href="<?php echo(get_site_url()); ?> " title="Revenir l'acceuil de RD Holding"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a> 
-					<a href="<?php echo(get_site_url()); ?>?s=<?php echo($searchstring . '&location=' . $joblocation); ?>" class=""
+					<a href="<?php echo(get_site_url()); ?>?location=<?php echo($location . '&marque=' . $marque); ?>" class=""
 						rel="bookmark">
 						< Revenir à la liste des offres </a>
 				</div>
