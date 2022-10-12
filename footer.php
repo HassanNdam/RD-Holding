@@ -18,18 +18,15 @@
             <div class="col-lg-4 footer-links">
                 <h5>
                     <a href="https://www.holding-rd-finance.fr/nos-valeurs" >Nos Valeurs</a>
-                    <hr class="footer-separator">
                 </h5>
             </div>
             <div class="col-lg-4 footer-links">
                 <h5>
                     <a href="https://www.holding-rd-finance.fr/blog" >Nos Actualités</a>
-                    <hr class="footer-separator">
                 </h5>
             </div>
             <div class="col-lg-4 footer-links">
                 <h5><a href="https://www.facebook.com/HoldingRDFinance/" class="white-text">Suivez-Nous sur Facebook</a>
-                    <hr class="footer-separator">
                 </h5>
             </div>
         </div>
@@ -37,18 +34,15 @@
             <div class="col-lg-4 footer-links">
                 <h5><a href="https://www.holding-rd-finance.fr/copie-de-le-groupe" >Nos etablissements /
                         Nos Adresses</a>
-                    <hr class="footer-separator">
                 </h5>
             </div>
             <div class="col-lg-4 footer-links">
                 <h5><a href="https://www.holding-rd-finance.fr/copie-de-nos-adresses" class="white-text">Nous
                         contacter</a>
-                    <hr class="footer-separator">
                 </h5>
             </div>
             <div class="col-lg-4 footer-links">
                 <h5><a href="https://www.holding-rd-finance.fr/nos-enseignes" class="white-text">Nos enseignes</a>
-                    <hr class="footer-separator">
                 </h5>
             </div>
         </div>
