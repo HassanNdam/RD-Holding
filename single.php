@@ -40,9 +40,10 @@ get_header(); ?>
 
     <div class="container header-wrapper">
         <div class="breadscrumbs">
-		<a href="<?= get_site_url(); ?>" title="Revenir l'acceuil de RD Holding"><i class="fa fa-home" aria-hidden="true"></i> Accueil</a>
-            <a href="<?php echo(get_site_url()); ?>?location=<?php echo($location . '&marque=' . $marque); ?>"
-                class="" rel="bookmark">
+            <a href="<?= get_site_url(); ?>" title="Revenir l'acceuil de RD Holding"><i class="fa fa-home"
+                    aria-hidden="true"></i> Accueil</a>
+            <a href="<?php echo(get_site_url()); ?>?location=<?php echo($location . '&marque=' . $marque); ?>" class=""
+                rel="bookmark">
                 < Revenir à la liste des offres</a>
         </div>
     </div>
@@ -52,25 +53,35 @@ get_header(); ?>
             <div class="col job-content mb-4">
                 <img class="img-fluid rounded-circle"
                     src="<?php echo(get_template_directory_uri()); ?>/images/logo/<?php echo($logoname); ?>.jpg"
-                    width="200" max-height="50" alt="Holding RD Finance - <?php echo $joborganisation ; ?>" title="Holding RD Finance - <?php echo $joborganisation ; ?>">
+                    width="200" max-height="50" alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+                    title="Holding RD Finance - <?php echo $joborganisation ; ?>">
             </div>
         </div>
 
-        <div class="row mb-3 align-items-center">
+        <div class="row mb-3 align-items-center d-flex">
             <div class="col-lg-12 bg-light p-5">
-                <h1 class="pb-1">
-                    <?php  echo the_title(); ?>
-                </h1>
-                <p><?php date_pub(); ?></p>
+                <div class="row">
+                    <h1>Pour</h1>
+                    <div class="col-lg-4">
+                        <img class="img-fluid rounded-circle"
+                            src="<?php echo(get_template_directory_uri()); ?>/images/logo/<?php echo($logoname); ?>.jpg"
+                            width="200" max-height="50" alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+                            title="Holding RD Finance - <?php echo $joborganisation ; ?>">
+                    </div>
+                    <h1 class="pb-1">
+                        <?php  echo the_title(); ?>
+                    </h1>
+                    <p><?php date_pub(); ?></p>
 
-				<?php if(is_null($job_contract_type)) : else : ?>
-                <p><i class="fa fa-briefcase" aria-hidden="true"></i> <?php echo ($job_contract_type); ?></p>
-				<?php endif; ?>
+                    <?php if(is_null($job_contract_type)) : else : ?>
+                    <p><i class="fa fa-briefcase" aria-hidden="true"></i> <?php echo ($job_contract_type); ?></p>
+                    <?php endif; ?>
 
-				<?php if(is_null($joblocation)) : else : ?>
-                <p> <i class="fa-solid fa-location-dot"></i> <?php echo($joblocation); ?></p>
-				<?php endif; ?>
+                    <?php if(is_null($joblocation)) : else : ?>
+                    <p> <i class="fa-solid fa-location-dot"></i> <?php echo($joblocation); ?></p>
+                    <?php endif; ?>
 
+                </div>
             </div>
         </div>
         <div class="row">
