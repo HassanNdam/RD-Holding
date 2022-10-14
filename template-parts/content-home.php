@@ -81,7 +81,10 @@ $postnumber = $myquery -> found_posts;
             <form method="get" id="" action="<?php echo(get_site_url()); ?>">
                 <div class="row searchrow justify-content-center">
                     <div class=" col-md-3 search-item ">
-                        <select name="marque" id="_marque-field" class="form-control form-select">
+
+                        <?php empty_brand_field(); ?>
+
+                        <select name="marque" id="_marque-field" class="form-control form-select mt-2">
                             <option value="0" <?php if ($marque == 0) {
                                 echo('selected');
                             } ?>>Toutes les marques</option>
@@ -92,9 +95,12 @@ $postnumber = $myquery -> found_posts;
                     </div>
 
                     <div class=" col-md-6 search-item">
+
+                        <?php empty_location_field(); ?>
+
                         <input type="text" id="location" name="location"
-                            placeholder="Localisation (Cp, Région, Département...)" class="form-control"
-                            value="<?php echo($location); ?>">
+                            placeholder="Localisation (Code postale, Région, Ville, Département...)"
+                            class="form-control  mt-2" value="<?php echo($location); ?>">
                     </div>
                 </div>
 
