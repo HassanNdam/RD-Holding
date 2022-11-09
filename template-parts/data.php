@@ -3,10 +3,10 @@
 // Récup marque
 
 define("MARQUE", [
-    "Edito",
     "Burger King",
-    "LE MILLENAIRE", 
-    "Lex", 
-    "Start Bucks", 
-    "The Sherlock Pub", 
+    "L'Edito",
+    "Le Millénaire",
+    "Lexperience",
+    "Sherlock",
+    "Startbucks",
   ], false);
