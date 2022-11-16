@@ -59,7 +59,7 @@
                     <div class="main-menu">
                         <a href="https://jobaffinity.fr/apply/mcmx2498axyex7d3ad" target="_blank"
                             title="Nous rejoindre">
-                            <button type="button" class="btn btn-primary" onclick="this.blur();"> <i class="fa fa-plus" aria-hidden="true"></i> Candidature
+                            <button type="button" class="btn btn-primary" onclick="this.blur();">Candidature
                                 spontanée</button>
                         </a>
                     </div>

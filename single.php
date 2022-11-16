@@ -35,55 +35,84 @@ get_header(); ?>
 
 	?>
 <article class="after-nav">
-    <div class="container-fluid bandeau-single">
+    <div class="container">
+        <div class="row mb-3 align-items-center d-flex">
+            <div class="col-lg-12 bg-light p-5 mb-5">
+                <h1 class="text-center mb-lg-5">
+                    <?php  echo the_title(); ?>
+                </h1>
+                <div class="row align-items-center">
+                    <div class="col-lg-12 text-center">
+                        <?php if($joborganisation == "Burger King") : ?>
+                        <img class="img-fluid rounded-circle"
+                            src="<?php echo(get_template_directory_uri()); ?>/images/post/burger_king.jpg" width="200"
+                            height="50" alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+                            title="Holding RD Finance - <?php echo $joborganisation ; ?>">
+
+                        <?php elseif($joborganisation == "L'Edito") : ?>
+                        <img class="img-fluid rounded-circle"
+                            src="<?php echo(get_template_directory_uri()); ?>/images/post/ledito.jpg" width="200"
+                            height="50" alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+                            title="Holding RD Finance - <?php echo $joborganisation ; ?>">
+
+                        <?php elseif($joborganisation == "Le Millénaire") : ?>
+                        <img class="img-fluid rounded-circle"
+                            src="<?php echo(get_template_directory_uri()); ?>/images/post/lemillenaire.jpg" width="200"
+                            height="50" alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+                            title="Holding RD Finance - <?php echo $joborganisation ; ?>">
+
+                        <?php elseif($joborganisation == "Lexperience") : ?>
+                        <img class="img-fluid rounded-circle"
+                            src="<?php echo(get_template_directory_uri()); ?>/images/post/Lexperience.jpg" width="200"
+                            height="50" alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+                            title="Holding RD Finance - <?php echo $joborganisation ; ?>">
+
+                        <?php elseif($joborganisation == "Startbucks") : ?>
+                        <img class="img-fluid rounded-circle"
+                            src="<?php echo(get_template_directory_uri()); ?>/images/post/starbucks.jpg" width="200"
+                            height="50" alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+                            title="Holding RD Finance - <?php echo $joborganisation ; ?>">
+
+                        <?php elseif($joborganisation == "Sherlock") : ?>
+                        <img class="img-fluid rounded-circle"
+                            src="<?php echo(get_template_directory_uri()); ?>/images/post/Sherlock.jpg" width="200"
+                            height="50" alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+                            title="Holding RD Finance - <?php echo $joborganisation ; ?>">
+
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <p><?php date_pub(); ?></p>
+
+                        <?php if(is_null($job_contract_type)) : else : ?>
+                        <p><i class="fa fa-briefcase" aria-hidden="true"></i> <?php echo ($job_contract_type); ?></p>
+                        <?php endif; ?>
+
+                        <?php if(is_null($joblocation)) : else : ?>
+                        <p> <i class="fa-solid fa-location-dot"></i>
+                            <?php echo($joblocation); echo ', ' . ($jobtown); ?></p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container header-wrapper">
         <div class="breadscrumbs">
             <a href="<?= get_site_url(); ?>" title="Revenir l'acceuil de RD Holding"><i class="fa fa-home"
-                    aria-hidden="true"></i> Accueil</a>
-            <a href="<?php echo(get_site_url()); ?>?location=<?php echo($location . '&marque=' . $marque); ?>" class=""
+                    aria-hidden="true"></i> Accueil
+            </a>
+            < <?php echo  get_the_title(); ?> <a
+                href="<?php echo(get_site_url()); ?>?location=<?php echo($location . '&marque=' . $marque); ?>" class=""
                 rel="bookmark">
-                < Revenir à la liste des offres</a>
+                < Revenir à la liste des offres </a>
         </div>
     </div>
 
     <div class="container job-description">
-        <div class="row ">
-            <div class="col job-content mb-4">
-                <img class="img-fluid rounded-circle"
-                    src="<?php echo(get_template_directory_uri()); ?>/images/logo/<?php echo($logoname); ?>.jpg"
-                    width="200" max-height="50" alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
-                    title="Holding RD Finance - <?php echo $joborganisation ; ?>">
-            </div>
-        </div>
-
-        <div class="row mb-3 align-items-center d-flex">
-            <div class="col-lg-12 bg-light p-5">
-                <div class="row">
-                    <h1>Pour</h1>
-                    <div class="col-lg-4">
-                        <img class="img-fluid rounded-circle"
-                            src="<?php echo(get_template_directory_uri()); ?>/images/logo/<?php echo($logoname); ?>.jpg"
-                            width="200" max-height="50" alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
-                            title="Holding RD Finance - <?php echo $joborganisation ; ?>">
-                    </div>
-                    <h1 class="pb-1">
-                        <?php  echo the_title(); ?>
-                    </h1>
-                    <p><?php date_pub(); ?></p>
-
-                    <?php if(is_null($job_contract_type)) : else : ?>
-                    <p><i class="fa fa-briefcase" aria-hidden="true"></i> <?php echo ($job_contract_type); ?></p>
-                    <?php endif; ?>
-
-                    <?php if(is_null($joblocation)) : else : ?>
-                    <p> <i class="fa-solid fa-location-dot"></i> <?php echo($joblocation); ?></p>
-                    <?php endif; ?>
-
-                </div>
-            </div>
-        </div>
         <div class="row">
             <div class="col-lg-12">
                 <?php the_content(); ?>

@@ -86,7 +86,7 @@ a {
 
 .btn-voir-offre {
     background-color: #505050;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
@@ -217,7 +217,7 @@ ul.header-logos-liste {
 
 .text-poste-filter {
     color: white;
-    margin-top: -150px;
+    margin-top: -250px;
     font-weight: 900;
     font-size:2.5em
 }
@@ -373,7 +373,7 @@ div.jobs {
 .fa-briefcase,
 .fa-location-dot,
 .fa-calendar-days {
-    color: #b60c0f;
+    color: #c00000;
 }
 
 /* 404 PAGE */
@@ -575,15 +575,7 @@ a.logolink:visited {
 }
 
 .bandeau-home {
-    background-image: url(images/header/header_home.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.bandeau-single {
-    background-image: url(images/header/header_single.jpg);
-    height: 450px;
+    background-image: url(images/header/home1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -639,7 +631,10 @@ a.logolink:visited {
 
 .card {
     padding: 1em;
+    border: 0.18em solid #bdbaba;
+    opacity: 0.5em;
 }
+
 
 .card-img {
     text-align: left;

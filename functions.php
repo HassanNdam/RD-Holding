@@ -176,6 +176,8 @@ function empty_brand_field()
     }
 }
 
+// Function empty location_field
+
 function empty_location_field()
 {
     if($_GET) {
@@ -189,3 +191,4 @@ function empty_location_field()
         }
     }
 }
+

@@ -76,8 +76,10 @@ $postnumber = $myquery -> found_posts;
 
 <article class="after-nav">
     <div class="container-fluid bandeau bandeau-home ">
+    </div>
+
+    <div class="container">
         <div class="container search">
-            <h1 class="text-poste-filter mb-5 text-center">TROUVEZ UN POSTE CHEZ FINANCE RD HOLDING</h1>
             <form method="get" id="" action="<?php echo(get_site_url()); ?>">
                 <div class="row searchrow justify-content-center">
                     <div class=" col-md-3 search-item ">
@@ -146,9 +148,9 @@ $postnumber = $myquery -> found_posts;
 
                 ?>
             <div class="col-lg-6 wrapper-card">
-                <div class="card h-100">
+                <div class="card h-100 rounded">
                     <div class="row card-block align-items-center">
-                        <div class="card-logo col-2">
+                        <div class="card-logo col-2 ">
                             <img class="img-fluid rounded-circle"
                                 src="<?php echo(get_template_directory_uri()); ?>/images/logo/<?php echo($logoname); ?>.jpg"
                                 alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
