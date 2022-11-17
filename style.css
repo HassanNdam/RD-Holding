@@ -34,6 +34,7 @@ html {
     height: 100%;
     min-height: 100vh;
     flex-direction: column;
+    font-size: 16px;
 }
 
 
@@ -86,7 +87,9 @@ a {
 
 .btn-voir-offre {
     background-color: #505050;
-    font-size: 12px;
+    text-transform: none;
+    font-size: 0.9em;
+
 }
 
 
@@ -299,6 +302,9 @@ div.jobs {
     margin-bottom: 50px;
 }
 
+.job-title {
+    font-weight: bold;
+}
 
 .search-submit {
     margin-top: 1em;
@@ -309,11 +315,10 @@ div.jobs {
 }
 
 .search form {
-    background-color: #505050;
+    background-color: rgba(0,22,71,0.6);
     padding: 2em;
     border-radius: 10px;
-    border-bottom: 3px solid #fe6161;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 #searchsubmit {
@@ -540,9 +545,9 @@ a.logolink:visited {
 
 
 .header-logos-comp {
-    height: 131px;
+    height: 110px;
     width: 460px;
-    background-image: url(images/logo/holdingRD.png);
+    background-image: url(images/logo/holdingrdfinance.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -576,6 +581,13 @@ a.logolink:visited {
 
 .bandeau-home {
     background-image: url(images/header/home1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bandeau-post {
+    background-image: url(images/header/home.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -631,7 +643,7 @@ a.logolink:visited {
 
 .card {
     padding: 1em;
-    border: 0.18em solid #bdbaba;
+    border:0.12em solid #bdbaba;
     opacity: 0.5em;
 }
 
@@ -711,7 +723,9 @@ img.card-picto {
     margin-bottom: 3em;
 }
 
-
+div.job-title{
+    font-size: 1.1em;
+}
 
 div.job-content h1 {
     color: #3C3C3B;

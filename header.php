@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="<?php echo(get_template_directory_uri() . '/style.css') ?>">
     <link rel="stylesheet" href="<?php echo(get_template_directory_uri() . '/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?v=2.1">
-    <link rel="icon" href="<?php echo(get_template_directory_uri() . '/images/icone/favicone.png') ?>"
+    <link rel="icon" href="<?php echo(get_template_directory_uri() . '/images/icone/faviconee.png') ?>"
         sizes="16x16 32x32 48x48 64x64">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -48,13 +48,13 @@
                         </ul>
                     </a>
                     <?php else : ?>
+
                     <a href="https://www.holding-rd-finance.fr/accueil" class="logolink d-none d-sm-block"
                         target="_blank">
                         <ul class="header-logos-liste header-liste">
                             <li class="header-logos-item header-logos-comp"></li>
                         </ul>
                     </a>
-
                     <?php endif; ?>
                     <div class="main-menu">
                         <a href="https://jobaffinity.fr/apply/mcmx2498axyex7d3ad" target="_blank"

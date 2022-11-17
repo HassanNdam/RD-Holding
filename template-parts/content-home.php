@@ -76,46 +76,47 @@ $postnumber = $myquery -> found_posts;
 
 <article class="after-nav">
     <div class="container-fluid bandeau bandeau-home ">
-    </div>
+        <div class="container">
+            <div class="container search">
+                <form method="get" id="" action="<?php echo(get_site_url()); ?>">
+                    <div class="row searchrow justify-content-center">
+                        <div class=" col-md-3 search-item ">
 
-    <div class="container">
-        <div class="container search">
-            <form method="get" id="" action="<?php echo(get_site_url()); ?>">
-                <div class="row searchrow justify-content-center">
-                    <div class=" col-md-3 search-item ">
+                            <?php empty_brand_field(); ?>
 
-                        <?php empty_brand_field(); ?>
-
-                        <select name="marque" id="_marque-field" class="form-control form-select mt-2">
-                            <option value="0" <?php if ($marque == 0) {
+                            <select name="marque" id="_marque-field" class="form-control form-select mt-2">
+                                <option value="0" <?php if ($marque == 0) {
                                 echo('selected');
                             } ?>>Toutes les marques</option>
 
-                            <?php select_search_value(MARQUE, $marque); ?>
+                                <?php select_search_value(MARQUE, $marque); ?>
 
-                        </select>
+                            </select>
+                        </div>
+
+                        <div class=" col-md-6 search-item">
+
+                            <?php empty_location_field(); ?>
+
+                            <input type="text" id="location" name="location"
+                                placeholder="Localisation (Code postale, Région, Ville, Département...)"
+                                class="form-control  mt-2" value="<?php echo($location); ?>">
+                        </div>
                     </div>
 
-                    <div class=" col-md-6 search-item">
-
-                        <?php empty_location_field(); ?>
-
-                        <input type="text" id="location" name="location"
-                            placeholder="Localisation (Code postale, Région, Ville, Département...)"
-                            class="form-control  mt-2" value="<?php echo($location); ?>">
+                    <div class="row searchrow justify-content-center">
+                        <div class="col-md-6 search-submit text-centered">
+                            <button type="submit" id="searchsubmit" class="btn" onclick="this.blur();"
+                                title="Rechercher une offre d'emploi"><i class="fa fa-search" aria-hidden="true"></i>
+                                Rechercher</button>
+                        </div>
                     </div>
-                </div>
-
-                <div class="row searchrow justify-content-center">
-                    <div class="col-md-6 search-submit text-centered">
-                        <button type="submit" id="searchsubmit" class="btn" onclick="this.blur();"
-                            title="Rechercher une offre d'emploi"><i class="fa fa-search" aria-hidden="true"></i>
-                            Rechercher</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
+
+
 
     <!-- Function refresh page if no post à > 0  -->
 
@@ -151,11 +152,20 @@ $postnumber = $myquery -> found_posts;
                 <div class="card h-100 rounded">
                     <div class="row card-block align-items-center">
                         <div class="card-logo col-2 ">
+                            <?php if($logoname != NULL) : ?>
                             <img class="img-fluid rounded-circle"
                                 src="<?php echo(get_template_directory_uri()); ?>/images/logo/<?php echo($logoname); ?>.jpg"
                                 alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
                                 title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="70"
                                 max-height="50">
+                            <?php else :  ?>
+
+                            <img class="img-fluid rounded-circle"
+                                src="<?php echo(get_template_directory_uri()); ?>/images/icone/faviconee.png"
+                                alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+                                title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="70"
+                                max-height="50">
+                            <?php endif; ?>
                         </div>
                         <div class="card-content col-10">
                             <div class="row card-meta">
