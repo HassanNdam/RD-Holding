@@ -65,3 +65,10 @@
                     </div>
                 </div>
         </section>
+
+        <?php if(is_single()) : ?>
+
+        <div class="container-fluid bandeau bandeau-post">
+
+        </div>
+        <?php endif; ?>

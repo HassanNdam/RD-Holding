@@ -1,6 +1,6 @@
 
 <section id="wrapper-footer">
-    <div class="container-sm">
+    <div class="container">
         <div class="row">
             <div class="col-lg-4 footer-links">
                 <h5>

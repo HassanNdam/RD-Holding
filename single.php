@@ -36,13 +36,14 @@ get_header(); ?>
 	?>
 
 </div>
-<?php if(is_single()) : ?>
+<!-- <?php if(is_single()) : ?>
 <div class="container-fluid bandeau bandeau-post">
-</div>
+    
+</div> -->
 
 <?php endif; ?>
 
-<div class="container header-wrapper">
+<div class="container">
     <div class="breadscrumbs">
         <a href="<?= get_site_url(); ?>" title="Revenir l'acceuil de RD Holding"><i class="fa fa-home"
                 aria-hidden="true"></i> Accueil
@@ -51,12 +52,26 @@ get_header(); ?>
             href="<?php echo(get_site_url()); ?>?location=<?php echo($location . '&marque=' . $marque); ?>" class=""
             rel="bookmark">
             < Revenir à la liste des offres </a>
-    </div><br><br>
+    </div><br>
 
+    <div class="container mb-4">
+        <?php if($logoname != NULL) : ?>
+        <img class="img-fluid rounded-circle"
+            src="<?php echo(get_template_directory_uri()); ?>/images/logo/<?php echo($logoname); ?>.jpg"
+            alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+            title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="100" max-height="50">
+        <?php else :  ?>
+
+        <img class="img-fluid rounded-circle"
+            src="<?php echo(get_template_directory_uri()); ?>/images/icone/faviconee.png"
+            alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+            title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="70" max-height="50">
+        <?php endif; ?>
+    </div>
     <article class="after-nav">
         <div class="container">
             <div class="row mb-3 align-items-center d-flex">
-                <div class="col-lg-12 bg-light p-5 mb-5">
+                <div class="col-lg-12 bg-light p-3">
                     <h1 class="mb-lg-5">
                         <?php  echo the_title(); ?>
                     </h1>
@@ -98,6 +113,6 @@ get_header(); ?>
 
     <?php endwhile; // end of the loop. ?>
 
+</div>
 
-
-    <?php get_footer(); ?>
+<?php get_footer(); ?>

@@ -123,18 +123,15 @@ $postnumber = $myquery -> found_posts;
     <?php refresh_page($marque, $location); ?>
 
 
-    <div class="container jobs">
-        <br>
+    <div class="container">
         <h3 class="offre-emploi">Nos offres d'emploi (<strong><?php echo $myquery -> found_posts ?></strong>) </h3>
-        <br>
-
         <?php if ($myquery->have_posts()) :
             ?>
         <?php
                     $index = 0;
             while ($myquery->have_posts()) : $myquery->the_post(); ?>
         <?php if ($index %2 == 0) : ?>
-        <div class="row  ">
+        <div class="row mt-lg-5">
             <?php endif; ?>
             <!-- LOOP CONTENT -->
             <?php

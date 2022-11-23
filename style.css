@@ -41,7 +41,6 @@ html {
 h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    padding-top: 0.5rem;
 }
 
 a {
@@ -66,6 +65,7 @@ a {
     color: white;
     padding-left: 1.2em;
     padding-right: 1.2em;
+    font-size: 0.8em;
 
 }
 
@@ -87,9 +87,10 @@ a {
 
 .btn-voir-offre {
     background-color: #505050;
-    text-transform: none;
-    font-size: 0.9em;
-
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-style: normal;
+    font-weight: 400;
 }
 
 
@@ -225,12 +226,12 @@ ul.header-logos-liste {
     font-size:2.5em
 }
 
-.header-wrapper {
+/* .header-wrapper {
     padding-left: 0em;
     padding-right: 0em;
     margin-left: 0em;
     margin-right: 0em;
-}
+} */
 
 @media (max-width: 1200px) {
     .container {
@@ -318,7 +319,7 @@ div.jobs {
     background-color: rgba(0,22,71,0.6);
     padding: 2em;
     border-radius: 10px;
-    opacity: 1;
+    opacity: 0.9;
 }
 
 #searchsubmit {
@@ -367,7 +368,7 @@ div.jobs {
 
 .offre-emploi {
     color: black;
-    text-align: left;
+    margin-top: 2em;
 }
 
 .job-title {
@@ -544,13 +545,15 @@ a.logolink:visited {
 }
 
 
-.header-logos-comp {
+ .header-logos-comp {
     height: 110px;
-    width: 460px;
+    width: 300px;
     background-image: url(images/logo/holdingrdfinance.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-left: -70px;
+
 }
 
 .header-logos-logotype--compiegne {
@@ -580,14 +583,14 @@ a.logolink:visited {
 }
 
 .bandeau-home {
-    background-image: url(images/header/home1.jpg);
+    background-image: url(images/header/restaurant-rd-holding.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .bandeau-post {
-    background-image: url(images/header/home.jpg);
+    background-image: url(images/header/restaurant-rd-holding.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
