@@ -57,16 +57,20 @@ a {
 .btn-primary {
     border-radius: 2em;
     background-color: #c00000;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     border: 0em;
-    font-weight: 900;
+    font-weight: 500;
     padding: .6em;
     letter-spacing: 0.1em;
     color: white;
     padding-left: 1.2em;
     padding-right: 1.2em;
-    font-size: 0.8em;
+    font-size: 0.9em;
 
+}
+
+.btn-candidate-not-found{
+    background-color: #c00000 !important;
 }
 
 .btn:hover {
@@ -87,7 +91,6 @@ a {
 
 .btn-voir-offre {
     background-color: #505050;
-    text-transform: uppercase;
     font-size: 0.8em;
     font-style: normal;
     font-weight: 400;
@@ -149,7 +152,7 @@ h1 .navbar-collapse {
 }
 
 
-#global-nav {
+/* #global-nav {
     background-color: #ffffff;
     color: rgb(3, 0, 0);
 
@@ -158,7 +161,7 @@ h1 .navbar-collapse {
 #global-nav .container {
     padding-bottom: 0px;
 
-}
+} */
 
 ul.header-logos-liste {
     list-style: none;
@@ -369,6 +372,7 @@ div.jobs {
 .offre-emploi {
     color: black;
     margin-top: 2em;
+    margin-left: 17px;
 }
 
 .job-title {
@@ -552,7 +556,7 @@ a.logolink:visited {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: -70px;
+    margin-left: -64px;
 
 }
 

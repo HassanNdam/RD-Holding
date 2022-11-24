@@ -8,5 +8,5 @@ define("MARQUE", [
     "Le Millénaire",
     "Lexperience",
     "Sherlock",
-    "Startbucks",
+    "Starbucks",
   ], false);

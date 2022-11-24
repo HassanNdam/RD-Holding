@@ -32,14 +32,14 @@ if($_GET) {
 
         if ($location != '') {
             if (is_numeric($location)) {
-                array_push($metaquery,  array(
+                array_push($metaquery, array(
                     'key' => 'job_postalcode',
                     'value' =>  $location,
                     'compare' => 'LIKE',
                 ));
             } else {
-                array_push($metaquery, array('relation' => 'OR', 
-                
+                array_push($metaquery, array('relation' => 'OR',
+
                 array(
                     'key' => 'job_town',
                     'value' => $location,
@@ -51,7 +51,7 @@ if($_GET) {
                     'value' => $location,
                     'compare' => 'LIKE',
                 ),
-                
+
                 ));
             };
         };
@@ -86,8 +86,8 @@ $postnumber = $myquery -> found_posts;
 
                             <select name="marque" id="_marque-field" class="form-control form-select mt-2">
                                 <option value="0" <?php if ($marque == 0) {
-                                echo('selected');
-                            } ?>>Toutes les marques</option>
+                                    echo('selected');
+                                } ?>>Toutes les marques</option>
 
                                 <?php select_search_value(MARQUE, $marque); ?>
 
@@ -136,7 +136,7 @@ $postnumber = $myquery -> found_posts;
             <!-- LOOP CONTENT -->
             <?php
                 $joborganisation = get_post_custom_values('job_organisation')[0];
-                $logoname = strtolower(substr($joborganisation, -3, 3));
+                // $logoname = strtolower(substr($joborganisation, -3, 3));
                 $secteuractivite = get_post_custom_values('custom_secteur_activite')[0];
                 $job_contract_type = get_post_custom_values('job_contract_type')[0];
                 $jobtown = get_post_custom_values('job_town')[0];
@@ -149,20 +149,9 @@ $postnumber = $myquery -> found_posts;
                 <div class="card h-100 rounded">
                     <div class="row card-block align-items-center">
                         <div class="card-logo col-2 ">
-                            <?php if($logoname != NULL) : ?>
-                            <img class="img-fluid rounded-circle"
-                                src="<?php echo(get_template_directory_uri()); ?>/images/logo/<?php echo($logoname); ?>.jpg"
-                                alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
-                                title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="70"
-                                max-height="50">
-                            <?php else :  ?>
-
-                            <img class="img-fluid rounded-circle"
-                                src="<?php echo(get_template_directory_uri()); ?>/images/icone/faviconee.png"
-                                alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
-                                title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="70"
-                                max-height="50">
-                            <?php endif; ?>
+                            <?php
+                            image_post_change_location($joborganisation);
+                             ?>
                         </div>
                         <div class="card-content col-10">
                             <div class="row card-meta">
@@ -228,8 +217,8 @@ $postnumber = $myquery -> found_posts;
             <div class="row text-center">
                 <a class="mt-5" href="https://jobaffinity.fr/apply/mcmx2498axyex7d3ad" target="_blank"
                     title="Soumettre une candidature spontanée">
-                    <button type="button" class="btn btn-primary" onclick="this.blur();"><i class="fa fa-plus"
-                            aria-hidden="true"></i> Candidature
+                    <button type="button" class="btn btn-primary btn-candidate-not-found" onclick="this.blur();">
+                        Candidature
                         spontanée</button>
                 </a>
             </div>

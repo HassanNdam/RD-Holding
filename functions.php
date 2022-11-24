@@ -170,7 +170,7 @@ function empty_brand_field()
             $location = $_GET['location'];
 
             if($marque == 0 and $location == '') {
-               echo "<span style = \"color : #ed594c;\">Veuillez sélectionner une marque</span>"; 
+                echo "<span style = \"color : #ed594c;\">Veuillez sélectionner une marque</span>";
             }
         }
     }
@@ -186,9 +186,71 @@ function empty_location_field()
             $location = $_GET['location'];
 
             if($marque == 0 and $location == '') {
-               echo "<span style = \"color : #ed594c;\">Veuillez saisir un Code postale/Région/Ville/Département </span>"; 
+                echo "<span style = \"color : #ed594c;\">Veuillez saisir un Code postale/Région/Ville/Département </span>";
             }
         }
     }
 }
 
+
+//Function change image
+
+function image_post_change_location($joborganisation)
+{
+    switch ($joborganisation) {
+        case 'Burger King':
+            ?>
+<img class="img-fluid rounded-circle" src="<?php echo(get_template_directory_uri()); ?>/images/logo/ito.jpg"
+    alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+    title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="70" max-height="50">
+<?php
+            break;
+        case 'L\Edito':
+            ?>
+<img class="img-fluid rounded-circle" src="<?php echo(get_template_directory_uri()); ?>/images/logo/ing.jpg"
+    alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+    title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="70" max-height="50">
+
+<?php
+                    break;
+        case 'Lexperience':
+            ?>
+<img class="img-fluid rounded-circle" src="<?php echo(get_template_directory_uri()); ?>/images/logo/nce.jpg"
+    alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+    title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="70" max-height="50">
+<?php
+            break;
+        case 'Sherlock':
+            ?>
+<img class="img-fluid rounded-circle" src="<?php echo(get_template_directory_uri()); ?>/images/logo/ock.jpg"
+    alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+    title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="70" max-height="50">
+
+<?php
+                break;
+
+        case 'Le Millénaire':
+            ?>
+<img class="img-fluid rounded-circle" src="<?php echo(get_template_directory_uri()); ?>/images/logo/ire.jpg"
+    alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+    title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="70" max-height="50">
+
+<?php
+                    break;
+        case 'Starbucks':
+            ?>
+<img class="img-fluid rounded-circle" src="<?php echo(get_template_directory_uri()); ?>/images/logo/cks.jpg"
+    alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+    title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="70" max-height="50">
+
+<?php
+                break;
+        default:
+            ?>
+<img class="img-fluid rounded-circle" src="<?php echo(get_template_directory_uri()); ?>/images/icone/faviconee.png"
+    alt="Holding RD Finance - <?php echo $joborganisation ; ?>"
+    title="Holding RD Finance - <?php echo $joborganisation ; ?>" width="60" max-height="50">
+<?php
+                break;
+    }
+}
