@@ -32,43 +32,43 @@
 </head>
 
 <body <?php body_class(); ?>>
-        <div class="container" id="page">
+    <div class="site" id="page">
 
-            <section id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
+        <section id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
-                <a class="skip-link screen-reader-text sr-only"
-                    href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
-                <nav id="global-nav" class="navbar navbar-expand-lg navbar-light">
-                    <div class="container">
-                        <?php if ( is_front_page() && is_home() ) : ?>
-                        <a href="https://www.holding-rd-finance.fr/accueil" class="logolink d-none d-sm-block"
-                            target="_blank">
-                            <ul class="header-logos-liste header-liste">
-                                <li class="header-logos-item header-logos-comp"></li>
-                            </ul>
+            <a class="skip-link screen-reader-text sr-only"
+                href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
+            <nav id="global-nav" class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <?php if ( is_front_page() && is_home() ) : ?>
+                    <a href="https://www.holding-rd-finance.fr/accueil" class="logolink d-none d-sm-block"
+                        target="_blank">
+                        <ul class="header-logos-liste header-liste">
+                            <li class="header-logos-item header-logos-comp"></li>
+                        </ul>
+                    </a>
+                    <?php else : ?>
+
+                    <a href="https://www.holding-rd-finance.fr/accueil" class="logolink d-none d-sm-block"
+                        target="_blank">
+                        <ul class="header-logos-liste header-liste">
+                            <li class="header-logos-item header-logos-comp"></li>
+                        </ul>
+                    </a>
+                    <?php endif; ?>
+                    <div class="main-menu">
+                        <a href="https://jobaffinity.fr/apply/mcmx2498axyex7d3ad" target="_blank"
+                            title="Nous rejoindre">
+                            <button type="button" class="btn btn-primary" onclick="this.blur();">Candidature
+                                spontanée</button>
                         </a>
-                        <?php else : ?>
-
-                        <a href="https://www.holding-rd-finance.fr/accueil" class="logolink d-none d-sm-block"
-                            target="_blank">
-                            <ul class="header-logos-liste header-liste">
-                                <li class="header-logos-item header-logos-comp"></li>
-                            </ul>
-                        </a>
-                        <?php endif; ?>
-                        <div class="main-menu">
-                            <a href="https://jobaffinity.fr/apply/mcmx2498axyex7d3ad" target="_blank"
-                                title="Nous rejoindre">
-                                <button type="button" class="btn btn-primary" onclick="this.blur();">Candidature
-                                    spontanée</button>
-                            </a>
-                        </div>
                     </div>
-            </section>
+                </div>
+        </section>
+
+        <?php if(is_single()) : ?>
+
+        <div class="container-fluid bandeau bandeau-post">
+
         </div>
-    <?php if(is_single()) : ?>
-
-    <div class="container-fluid bandeau bandeau-post">
-
-    </div>
-    <?php endif; ?>
+        <?php endif; ?>
